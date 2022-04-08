@@ -5,7 +5,7 @@ __author__ = "730437270"
 
 def invert(d: dict[str, str]) -> dict[str, str]:
     """Invert dictionary keys and values."""
-    empty = {}
+    empty: dict[str, str] = {}
     for key in d:
         value = d[key]
         if value in empty:
@@ -17,7 +17,7 @@ def invert(d: dict[str, str]) -> dict[str, str]:
 
 def favorite_color(i: dict[str, str]) -> str:
     """Assessing most common color."""
-    empty = {}
+    empty: dict[str, int] = {}
     for key in i:
         value = i[key]
         if value in empty:
@@ -36,10 +36,10 @@ def favorite_color(i: dict[str, str]) -> str:
 
 def count(c: list[str]) -> dict[str, int]:
     """Count of each item in the list."""
-    empty = {}
+    empty: dict[str, int] = {}
     for i in c:
-        if c in empty:
-            empty[c] += 1
+        if i in empty:
+            empty[i] += 1
         else:
-            empty[c] = 1
+            empty[i] = 1
     return empty
